@@ -56,6 +56,12 @@ The four lenses: **business value**, **market demand**, **complexity**, and **ri
 
 ## Installation
 
+```bash
+curl -fsSL https://raw.githubusercontent.com/Tacsiazuma/shall-we/main/install.sh | bash
+```
+
+The installer downloads the skill to `~/.agent-skills/shall-we/` and prints the next steps for your agent.
+
 ### Claude Code
 
 ```
@@ -71,13 +77,11 @@ Then use it with:
 
 ### Cursor, VS Code, GitHub Copilot, and other agents
 
-Point your agent to the skill directory:
+After running the installer, point your agent to `~/.agent-skills/shall-we/` as a skill source. Or add it directly from the repo:
 
 ```
 https://github.com/Tacsiazuma/shall-we/tree/main/skills/shall-we
 ```
-
-Or clone the repo and add the `skills/shall-we` directory as a skill source in your agent's settings.
 
 ---
 
