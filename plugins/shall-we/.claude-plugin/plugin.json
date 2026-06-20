@@ -1,7 +1,7 @@
 {
   "name": "shall-we",
   "description": "Evaluates an idea against business value, complexity, market demand, and risk — then gives a yes / no / later verdict",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": {
     "name": "tacsiazuma",
     "email": "fejlesztes@letscode.hu"

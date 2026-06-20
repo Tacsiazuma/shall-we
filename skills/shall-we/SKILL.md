@@ -1,6 +1,10 @@
 ---
 name: shall-we
 description: Evaluates whether an idea is worth building. Asks focused questions one at a time to understand the idea, then delivers a structured verdict — yes / no / later — with reasoning and what would need to be true for a "yes". Use when someone pitches an idea, feature, product, or initiative and wants an honest assessment before committing to it.
+license: MIT
+metadata:
+  author: tacsiazuma
+  version: "1.0"
 ---
 
 # shall-we

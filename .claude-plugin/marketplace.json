@@ -6,12 +6,12 @@
   },
   "metadata": {
     "description": "Helps you decide whether an idea is worth building",
-    "version": "0.1.0"
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "shall-we",
-      "source": "./plugins/shall-we",
+      "source": ".",
       "description": "Evaluates an idea against business value, complexity, market demand, and risk — then gives a yes / no / later verdict"
     }
   ]

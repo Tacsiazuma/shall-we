@@ -7,7 +7,9 @@
 ╚══════╝ ╚═╝  ╚═╝ ╚═╝  ╚═╝ ╚══════╝ ╚══════╝     ╚══╝╚══╝  ╚══════╝    ╚═╝
 ```
 
-A [Claude Code](https://claude.com/claude-code) skill that helps you decide whether an idea is worth building — before you build it.
+A skill that helps you decide whether an idea is worth building — before you build it.
+
+Implements the [Agent Skills](https://agentskills.io) open standard. Works with Claude Code, Cursor, GitHub Copilot, Gemini CLI, OpenAI Codex, and [any other compatible agent](https://agentskills.io/clients).
 
 ---
 
@@ -25,21 +27,6 @@ This skill is the uncomfortable question. It was inspired by two characters who'
 `shall-we` thinks like both of them, but operates one level higher: at the PM layer, where the decision to build (or not) is still cheap. It asks the questions that should happen before any code is written, any ticket is created, any design doc is started.
 
 ---
-
-## Installation
-
-```
-/plugin marketplace add Tacsiazuma/shall-we
-/plugin install shall-we@shall-we
-```
-
-## Usage
-
-```
-/shall-we
-```
-
-Then describe your idea. The skill takes it from there.
 
 ## How it works
 
@@ -63,7 +50,34 @@ Then describe your idea. The skill takes it from there.
 - ...
 ```
 
-The four lenses it uses: **business value**, **market demand**, **complexity**, and **risk**.
+The four lenses: **business value**, **market demand**, **complexity**, and **risk**.
+
+---
+
+## Installation
+
+### Claude Code
+
+```
+/plugin marketplace add Tacsiazuma/shall-we
+/plugin install shall-we@shall-we
+```
+
+Then use it with:
+
+```
+/shall-we
+```
+
+### Cursor, VS Code, GitHub Copilot, and other agents
+
+Point your agent to the skill directory:
+
+```
+https://github.com/Tacsiazuma/shall-we/tree/main/skills/shall-we
+```
+
+Or clone the repo and add the `skills/shall-we` directory as a skill source in your agent's settings.
 
 ---
 
@@ -71,13 +85,13 @@ The four lenses it uses: **business value**, **market demand**, **complexity**, 
 
 ```
 .
+├── skills/
+│   └── shall-we/
+│       └── SKILL.md       # agentskills.io standard skill
 ├── .claude-plugin/
-│   └── marketplace.json
+│   └── marketplace.json   # Claude Code marketplace manifest
 └── plugins/
     └── shall-we/
-        ├── .claude-plugin/
-        │   └── plugin.json
-        └── skills/
-            └── shall-we/
-                └── SKILL.md
+        └── .claude-plugin/
+            └── plugin.json
 ```
