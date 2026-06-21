@@ -56,12 +56,6 @@ The four lenses: **business value**, **market demand**, **complexity**, and **ri
 
 ## Installation
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/Tacsiazuma/shall-we/main/install.sh | bash
-```
-
-The installer downloads the skill to `~/.agent-skills/shall-we/` and prints the next steps for your agent.
-
 ### Claude Code
 
 ```
@@ -69,19 +63,46 @@ The installer downloads the skill to `~/.agent-skills/shall-we/` and prints the 
 /plugin install shall-we@shall-we
 ```
 
-Then use it with:
+Then invoke with `/shall-we`.
 
-```
-/shall-we
+### Gemini CLI
+
+```bash
+gemini skills install https://github.com/Tacsiazuma/shall-we.git --consent
 ```
 
-### Cursor, VS Code, GitHub Copilot, and other agents
+### Cursor
 
-After running the installer, point your agent to `~/.agent-skills/shall-we/` as a skill source. Or add it directly from the repo:
+Clone the skill into Cursor's skill directory:
 
+```bash
+git clone https://github.com/Tacsiazuma/shall-we.git /tmp/shall-we
+cp -r /tmp/shall-we/skills/shall-we ~/.cursor/skills/shall-we
 ```
-https://github.com/Tacsiazuma/shall-we/tree/main/skills/shall-we
+
+Cursor picks it up automatically — no restart needed.
+
+### VS Code (GitHub Copilot)
+
+Copy the skill into your project:
+
+```bash
+mkdir -p .agents/skills
+git clone https://github.com/Tacsiazuma/shall-we.git /tmp/shall-we
+cp -r /tmp/shall-we/skills/shall-we .agents/skills/shall-we
 ```
+
+### OpenAI Codex
+
+```bash
+mkdir -p ~/.agents/skills
+git clone https://github.com/Tacsiazuma/shall-we.git /tmp/shall-we
+cp -r /tmp/shall-we/skills/shall-we ~/.agents/skills/shall-we
+```
+
+### Any other agent
+
+The skill lives at `skills/shall-we/SKILL.md` in this repo. Copy or symlink that directory wherever your agent looks for skills. See [agentskills.io/clients](https://agentskills.io/clients) for agent-specific paths.
 
 ---
 
