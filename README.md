@@ -1,3 +1,10 @@
+> **⚠️ This repository is archived.** `shall-we` now lives in the `product-skills` plugin of [Tacsiazuma/skills](https://github.com/Tacsiazuma/skills):
+>
+> ```
+> /plugin marketplace add Tacsiazuma/skills
+> /plugin install product-skills@tacsiazuma-skills
+> ```
+
 ```
 ███████╗ ██╗  ██╗  █████╗  ██╗      ██╗         ██╗    ██╗ ███████╗ ██████╗ 
 ██╔════╝ ██║  ██║ ██╔══██╗ ██║      ██║         ██║    ██║ ██╔════╝ ╚════██╗
